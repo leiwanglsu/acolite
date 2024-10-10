@@ -2,7 +2,7 @@
 
 #--------------------------------------------------------------------
 # Specific to ACOLITE
-
+data/
 # LUTs and MET data
 data/LUT/
 data/MET/

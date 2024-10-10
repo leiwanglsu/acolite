@@ -50,11 +50,11 @@ def launch_acolite():
     if '--retrieve_luts' in sys.argv:
         ac.acolite.acolite_luts(sensor=args.sensor)
         return()
-
+    print(args)
     ## run AGH
     if args.settings_agh is not None:
         import acolite.gee
-        acolite.gee.agh_run(settings=args.settings_agh, acolite_settings=args.settings)
+        acolite.gee.agh_run(settings=args.settings_agh, acolite_settings=args.settings,old_agh=False)
         return()
 
     ## command line processing, run acolite_run directly
