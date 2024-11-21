@@ -603,13 +603,11 @@ def agh(image, imColl, rsrd = {}, lutd = {}, luti = {}, settings = {}):
                                                 {'rhotp': rhot_prime.select(bname)})
 
                     ## rhos corrected for glint
-                    if(np.isinf(glint_ave[b]) or np.isnan(glint_ave[b])):
-                        print(f"glint b is {glint_ave[b]} type: {type(glint_ave[b])}), not working")
-                        continue
+                    
                     expression = f"rhos - (rhog * {glint_ave[b]})"
-                    print(expression)
+                    
                     if "nan" in expression or "inf" in expression:
-                        print(expression)
+                        pass
                     else:
                         rhos = rhos.expression(expression,
                                                {'rhos': rhos.select(bname), 'rhog': glint.select('glint')})

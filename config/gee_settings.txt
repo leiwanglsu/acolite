@@ -4,9 +4,9 @@ override=False
 ## target point or ROI
 ## if ROI is given scene is cropped to ROI
 ## target station longitude and latitude
-st_lon=-84.0162247
-st_lat=34.20234
-st_box=30
+st_lon=-89.9569
+st_lat=30.1111
+st_box=100
 st_crop=True # crop to box around station
 region_name=None # region name for this run
 region_name_add_box=True # add box size to region name
@@ -21,16 +21,16 @@ tile_size=606,606
 
 ## dates to check
 ## if end date is None, day_range days will be added to start date
-isodate_start=2021-10-01
-isodate_end=2021-10-01
+isodate_start=2024-03-01
+isodate_end=2024-04-02
 day_range=7
 
 ## sensors to check, an Image Collection will be made containing all listed
-sensors=L5_TM,L7_ETM,L8_OLI,L9_OLI,S2A_MSI,S2B_MSI
+sensors=S2A_MSI,S2B_MSI
 filter_tiles=None
 
 ## processing settings
-surface_reflectance=False # get standard SR products
+surface_reflectance=False
 run_hybrid_dsf=True # run DSF online on GEE data
 run_offline_dsf=False # run DSF on downloaded data (currently only if hybrid is off)
 subset_aot=True # compute aot over subset (True) or over full scene (False)

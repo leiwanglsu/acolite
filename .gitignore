@@ -56,3 +56,5 @@ __pycache__/
 # Specific to Mac
 
 .DS_Store
+config/gee_settings.txt
+config/gee_settings.txt
